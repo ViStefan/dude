@@ -37,7 +37,7 @@
 Ветвление:
 
     if <test> then
-	foo = bar;
+        foo = bar;
     [else
         spam = eggs;]
     end;
