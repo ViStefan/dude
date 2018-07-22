@@ -1,0 +1,29 @@
+// computes closest prime number to only passed argument
+Alg closestPrime;
+arg x;
+	if isPrime(x) = 1 then
+		closestPrime = x;
+	else
+		closestPrime = closestPrime(x + 1);
+	end;
+end;
+	
+
+Sub isPrime;
+arg x;
+	isPrime = 1 - Divisible(x, x - 1);
+end;
+
+
+Sub Divisible;
+arg x, y;
+	if 1 < y then
+		if x % y = 0 then
+			Divisible = 1;
+		else
+			Divisible = Divisible(x, y - 1);
+		end;
+	else
+		Divisible = 0;
+	end;
+end;	

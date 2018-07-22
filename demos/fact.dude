@@ -1,0 +1,9 @@
+// computes factorial on only passed argument
+Alg factorial;
+arg x;
+	if 1 < x then 
+		factorial = x * factorial(x - 1);
+	else
+		factorial = 1;
+	end;
+end;
